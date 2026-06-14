@@ -41,12 +41,14 @@ Delivery delays can affect review scores.
 Certain payment methods dominate customer transactions.
 
 # Dashboard Preview
-![Overview Dashboard](Screenshots/Dashboard_1.Executive Overview.png)
+#### Executive Overview
+![Executive Overview](1.%20Executive%20Overview.png)
 
+### Customer & Operations Analysis
+![Customer & Operations Analysis](2.%20Customer%20%26%20Operations%20Analysis.png)
 
-
-
-
+### Product & Sales Performance
+![Product & Sales Performance](3.%20Product%20%26%20Sales%20Performance.png)
 
 
 # Project Structure
