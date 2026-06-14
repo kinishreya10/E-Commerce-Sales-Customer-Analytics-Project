@@ -133,58 +133,8 @@ COUNT(order_id) order_id,
 COUNT(review_score) review_score
 FROM reviews;
 
--- 4) Most Important Check Before Master Table
-SELECT COUNT(*)  -- orders count
-FROM orders;
-
-SELECT COUNT(*) -- Now join orders with customers(ans should same as orders count)
-FROM orders o
-LEFT JOIN customers c
-ON o.customer_id = c.customer_id;
-
--- now join orders with payments(if result becomes more than count then that's normal, 
---bcz 1 order can have multiple payment records)
-FROM orders o
-SELECT COUNT(*) 
-LEFT JOIN payments p
-ON o.order_id = p.order_id;
--- and you must be careful while creating the master table because revenue may get duplicated if you later join 
---more one-to-many tables.
-
 ----------------------------------------------------------------------------------------------
------------------------------- 2.  Create Analytical View ------------------------------------
--- Create 1 master table
-CREATE VIEW ecommerce_master AS
-SELECT
-    o.order_id,
-    o.customer_id,
-    c.customer_city,
-    c.customer_state,
-
-    o.order_status,
-    o.purchase_year,
-    o.purchase_month,
-
-    o.delivery_days,
-    o.delivery_delay_days,
-    o.is_delayed,
-
-    p.payment_type,
-    p.payment_value,
-
-    r.review_score
-
-FROM orders o
-LEFT JOIN customers c
-ON o.customer_id = c.customer_id
-LEFT JOIN payments p
-ON o.order_id = p.order_id
-LEFT JOIN reviews r
-ON o.order_id = r.order_id;
-
-
-----------------------------------------------------------------------------------------------
------------------ 3. Business Questions (queries- sql analysis) ------------------------------
+----------------- 2. Business Questions (queries- sql analysis) ------------------------------
 -- 1) Total Revenue
 select 
 round(sum(payment_value)::numeric,2) as total_revenue
@@ -249,37 +199,7 @@ GROUP BY review_score
 ORDER BY review_score;
 
 ----------------------------------------------------------------------------------------------
--------------------------------- 4.Fraud Analytics Section -----------------------------------
--- Since Olist doesn't contain a fraud flag, create fraud indicators.
--- 1) High Value Orders
-SELECT * FROM ecommerce_master
-WHERE payment_value > (
-SELECT PERCENTILE_CONT(0.95)
-WITHIN GROUP(ORDER BY payment_value)
-FROM ecommerce_master);
-
---2)Multiple Payments per Order
-select order_id, 
-count(*) payment_count from payments
-group by order_id 
-having count(*) >1;
-
---3) Low Review + High Payment [Potential suspicious orders]
-select order_id, payment_value, review_score
-from ecommerce_master 
-where payment_value > 500 
-and review_score <=2;
-
---4) Extremely Delayed Orders
-select
-order_id, delivery_delay_days
-from orders
-where delivery_delay_days > 30;
-
-
-
-----------------------------------------------------------------------------------------------
--------------------------------- 5. Advanced SQL Queries -----------------------------------
+-------------------------------- 3. Advanced SQL Queries -----------------------------------
 -- 1) Top 10 Customers by Spending
 SELECT
 customer_id,
@@ -309,7 +229,3 @@ LAG(revenue) OVER() previous_month,
 ROUND(((revenue - LAG(revenue) OVER()) / LAG(revenue) OVER()*100)::numeric,2)
 AS growth_percent
 FROM monthly_sales;
-'''In PostgreSQL, the ROUND() function does not accept a double precision (float) data type when you specify the 
-number of decimal places. It only accepts the numeric data type for that specific syntax.
-The FixYou must explicitly cast your calculation to numeric before applying the ROUND() function.
-   ::numeric   '''
