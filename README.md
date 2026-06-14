@@ -4,6 +4,8 @@ This project analyzes customer orders, payments, delivery performance, and custo
 # Dataset Information 
 Dataset: Olist E-Commerce Dataset
 - The original Olist dataset contains multiple relational tables with over 100,000 records. For this project, the relevant tables were merged and transformed into an analytical dataset containing approximately 3,900 records and 18 features for reporting and dashboard development.
+- Dataset link :-
+  https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 Key Columns:- 
 Customer ID, Order ID, Customer State, Order Status, Payment Type, Payment Value, Review Score, Delivery Dates
