@@ -65,6 +65,6 @@ E-Commerce-Sales-Customer-Analytics/
 └── README.md
 
 # Future Improvements
-Sales Forecasting
-Customer Segmentation
+Sales Forecasting, 
+Customer Segmentation, 
 Real-Time Dashboard Integration
