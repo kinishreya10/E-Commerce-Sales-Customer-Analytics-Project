@@ -45,10 +45,10 @@ Certain payment methods dominate customer transactions.
 ![Executive Overview](Executive_overview.png)
 
 ### Customer & Operations Analysis
-![Customer & Operations Analysis](2.%20Customer%20%26%20Operations%20Analysis.png)
+![Customer & Operations Analysis](Customer_operations_analysis.png)
 
 ### Product & Sales Performance
-![Product & Sales Performance](3.%20Product%20%26%20Sales%20Performance.png)
+![Product & Sales Performance](Product_sales_performance.png)
 
 
 # Project Structure
