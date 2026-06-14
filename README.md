@@ -41,7 +41,7 @@ Delivery delays can affect review scores.
 Certain payment methods dominate customer transactions.
 
 # Dashboard Preview
-
+![Overview Dashboard](Screenshots/Dashboard_1.Executive Overview.png)
 
 
 
