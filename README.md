@@ -19,10 +19,7 @@ GitHub
 
 # Project Workflow
 Data Cleaning:- 
-Handled missing values , Removed duplicates , Validated data quality , Converted date columns , Created analytical features 
-
-Exploratory Data Analysis (EDA):- 
-Customer analysis , Order analysis , Payment analysis , Review score analysis , Delivery performance analysis
+Handled missing values , Removed duplicates , Validated data quality , Converted date columns
 
 SQL Analysis:- 
 Total Revenue Analysis , Total Orders Analysis ,
@@ -37,10 +34,9 @@ Created an interactive Power BI dashboard containing:
 The dashboard provides interactive filtering, sales trend visualization, and business performance insights.
 
 # Key Insights
-Revenue is concentrated in top-performing regions.
-Customer satisfaction impacts business performance.
-Delivery delays can affect review scores.
-Certain payment methods dominate customer transactions.
+ Revenue is concentrated in a few major states
+ A small number of sellers generate a large share of revenue
+ Monthly revenue shows seasonal trends
 
 # Dashboard Preview
 #### Executive Overview
