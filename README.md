@@ -43,7 +43,7 @@ The dashboard provides interactive filtering, sales trend visualization, and bus
 ![Executive Overview](Executive_overview.png)
 
 ### Customer & Operations Analysis
-![Customer & Operations Analysis](Customer_operations_analysis.png)
+![Customer & Operations Analysis](Customer_and_Operations_Analysis.png)
 
 ### Product & Sales Performance
 ![Product & Sales Performance](Product_sales_performance.png)
