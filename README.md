@@ -3,7 +3,7 @@ This project analyzes customer orders, payments, delivery performance, and custo
 
 # Dataset Information 
 Dataset: Olist E-Commerce Dataset
-- The original Olist dataset contains multiple relational tables with over 100,000 records. For this project, the relevant tables were merged and transformed into an analytical dataset containing approximately 3,900 records and 18 features for reporting and dashboard development.
+- The original Olist dataset contains multiple relational tables with over 100,000 records.
 - Dataset link :-
   https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
@@ -34,9 +34,9 @@ Created an interactive Power BI dashboard containing:
 The dashboard provides interactive filtering, sales trend visualization, and business performance insights.
 
 # Key Insights
- Revenue is concentrated in a few major states
- A small number of sellers generate a large share of revenue
- Monthly revenue shows seasonal trends
+ Revenue is concentrated in a few major states. 
+ A small number of sellers generate a large share of revenue. 
+ Monthly revenue shows seasonal trends.
 
 # Dashboard Preview
 #### Executive Overview
