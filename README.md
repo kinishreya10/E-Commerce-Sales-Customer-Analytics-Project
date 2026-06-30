@@ -53,9 +53,9 @@ The dashboard provides interactive filtering, sales trend visualization, and bus
 E-Commerce-Sales-Customer-Analytics/
 │
 ├── notebooks/
-│   └── ecommerce_fraud_analysis.ipynb
+│   └── ecommerce_sales_Customer_analytics.ipynb
 ├── sql/
-│   └── ecommerce-1.sql
+│   └── ecommerce_sales_customer_analytics.sql
 ├── powerbi/
-│   └── ecommerce_fraud_analysis.png
+│   └── ecommerce_sales_customer_analysis.png
 └── README.md
