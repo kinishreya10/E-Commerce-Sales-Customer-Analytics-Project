@@ -57,7 +57,5 @@ E-Commerce-Sales-Customer-Analytics/
 ├── sql/
 │   └── ecommerce-1.sql
 ├── powerbi/
-│   └── ecommerce_fraud_analysis.pbix
-├── reports/
-│   └── project_report.pdf
+│   └── ecommerce_fraud_analysis.png
 └── README.md
